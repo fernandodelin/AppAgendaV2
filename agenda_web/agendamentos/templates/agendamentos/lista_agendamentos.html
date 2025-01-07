@@ -1,0 +1,89 @@
+{% extends 'agendamentos/base.html' %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h5 class="card-title mb-0">Filtros</h5>
+    </div>
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-md-3">
+                {{ form_filtro.data_inicio.label_tag }}
+                {{ form_filtro.data_inicio }}
+            </div>
+            <div class="col-md-3">
+                {{ form_filtro.data_fim.label_tag }}
+                {{ form_filtro.data_fim }}
+            </div>
+            <div class="col-md-3">
+                {{ form_filtro.status.label_tag }}
+                {{ form_filtro.status }}
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+                <a href="{% url 'lista_agendamentos' %}" class="btn btn-outline-secondary ms-2">
+                    Limpar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="card-title mb-0">Agendamentos</h5>
+        <a href="{% url 'criar_agendamento' %}" class="btn btn-primary">
+            Novo Agendamento
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Profissional</th>
+                        <th>Data/Hora</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for agendamento in agendamentos %}
+                    <tr>
+                        <td>{{ agendamento.cliente }}</td>
+                        <td>{{ agendamento.servico }}</td>
+                        <td>{{ agendamento.profissional }}</td>
+                        <td>{{ agendamento.data_hora|date:"d/m/Y H:i" }}</td>
+                        <td>
+                            <span class="badge bg-{{ agendamento.status|lower }}">
+                                {{ agendamento.get_status_display }}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="{% url 'detalhe_agendamento' agendamento.pk %}" 
+                                   class="btn btn-sm btn-outline-primary">
+                                    Ver
+                                </a>
+                                <a href="{% url 'editar_agendamento' agendamento.pk %}" 
+                                   class="btn btn-sm btn-outline-secondary">
+                                    Editar
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" class="text-center">
+                            Nenhum agendamento encontrado.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

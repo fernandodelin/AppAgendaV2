@@ -1,0 +1,80 @@
+{% extends 'agendamentos/base.html' %}
+
+    {% block content %}
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Agendamentos de Hoje</h5>
+                </div>
+                <div class="card-body">
+                    {% if agendamentos_hoje %}
+                        {% for agendamento in agendamentos_hoje %}
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h6 class="mb-0">{{ agendamento.cliente }}</h6>
+                                <small class="text-muted">
+                                    {{ agendamento.servico }} - {{ agendamento.data_hora|time:"H:i" }}
+                                </small>
+                            </div>
+                            <span class="badge bg-{{ agendamento.status|lower }}">
+                                {{ agendamento.get_status_display }}
+                            </span>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted mb-0">Nenhum agendamento para hoje.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">Próximos Agendamentos</h5>
+                </div>
+                <div class="card-body">
+                    {% if proximos_agendamentos %}
+                        {% for agendamento in proximos_agendamentos %}
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h6 class="mb-0">{{ agendamento.cliente }}</h6>
+                                <small class="text-muted">
+                                    {{ agendamento.data_hora|date:"d/m/Y H:i" }} - {{ agendamento.servico }}
+                                </small>
+                            </div>
+                            <a href="{% url 'detalhe_agendamento' agendamento.pk %}" 
+                            class="btn btn-sm btn-outline-primary">
+                                Detalhes
+                            </a>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted mb-0">Nenhum agendamento futuro.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">Ações Rápidas</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex gap-2">
+                        <a href="{% url 'criar_agendamento' %}" class="btn btn-primary">
+                            Novo Agendamento
+                        </a>
+                        <a href="{% url 'lista_agendamentos' %}" class="btn btn-outline-primary">
+                            Ver Todos Agendamentos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

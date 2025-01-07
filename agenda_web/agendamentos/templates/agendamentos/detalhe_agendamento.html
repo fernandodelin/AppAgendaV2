@@ -1,0 +1,57 @@
+{% extends 'agendamentos/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">Detalhes do Agendamento</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Cliente</h6>
+                <p>{{ agendamento.cliente.nome }}</p>
+                <p>
+                    <strong>Telefone:</strong> {{ agendamento.cliente.telefone }}<br>
+                    <strong>Email:</strong> {{ agendamento.cliente.email }}
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h6>Serviço</h6>
+                <p>{{ agendamento.servico.nome }}</p>
+                <p>
+                    <strong>Duração:</strong> {{ agendamento.servico.duracao }}<br>
+                    <strong>Preço:</strong> R$ {{ agendamento.servico.preco }}
+                </p>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Data e Hora</h6>
+                <p>{{ agendamento.data_hora|date:"d/m/Y H:i" }}</p>
+            </div>
+            <div class="col-md-6">
+                <h6>Status</h6>
+                <span class="badge bg-{{ agendamento.status|lower }}">
+                    {{ agendamento.get_status_display }}
+                </span>
+            </div>
+        </div>
+        
+        {% if agendamento.observacoes %}
+        <div class="mt-3">
+            <h6>Observações</h6>
+            <p>{{ agendamento.observacoes }}</p>
+        </div>
+        {% endif %}
+        
+        <div class="mt-4">
+            <a href="{% url 'lista_agendamentos' %}" class="btn btn-secondary">Voltar</a>
+            <a href="{% url 'editar_agendamento' agendamento.pk %}" 
+               class="btn btn-primary">Editar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
