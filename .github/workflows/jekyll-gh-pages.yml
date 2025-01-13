@@ -36,11 +36,11 @@ jobs:
         working-directory: ./AppAgendaV2/agenda_web
         run: |
           python manage.py collectstatic --noinput
-          mkdir -p ../../_site
-          cp -r staticfiles/* ../../_site/
+          mkdir -p ./_site
+          cp -r staticfiles/* ./_site/
           # Copiar também o index.html se existir
           if [ -f "templates/index.html" ]; then
-            cp templates/index.html ../../_site/
+            cp templates/index.html ./_site/
           fi
 
       - name: Upload artifact
