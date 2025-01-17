@@ -33,7 +33,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Collect Static Files
-        working-directory: ./AppAgendaV2/agenda_web
         run: |
           python manage.py collectstatic --noinput
           mkdir -p ./_site
