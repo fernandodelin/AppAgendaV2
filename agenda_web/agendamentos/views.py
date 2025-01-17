@@ -1,6 +1,6 @@
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib import messages
+from django.contrib.auth.decorators import login_required # type: ignore
+from django.shortcuts import render, redirect, get_object_or_404 # type: ignore
+from django.contrib import messages # type: ignore
 from .models import Agendamento
 from .forms import AgendamentoForm
 from datetime import datetime, timedelta
