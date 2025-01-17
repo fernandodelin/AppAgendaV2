@@ -25,22 +25,22 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Debug directory structure
+      - name: Debug directory
         run: |
           pwd
           ls -la
-          ls -la AppAgendaV2
-          ls -la AppAgendaV2/agenda_web
+          echo "Current directory structure:"
+          tree
 
       - name: Install Dependencies
-        working-directory: ./AppAgendaV2/agenda_web
         run: |
           python -m pip install --upgrade pip
+          cd AppAgendaV2/agenda_web
           pip install -r requirements.txt
 
       - name: Collect Static Files
-        working-directory: ./AppAgendaV2/agenda_web
         run: |
+          cd AppAgendaV2/agenda_web
           python manage.py collectstatic --noinput
           mkdir -p _site
           cp -r staticfiles/* _site/
@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./AppAgendaV2/agenda_web/_site
+          path: AppAgendaV2/agenda_web/_site
 
   deploy:
     needs: build
