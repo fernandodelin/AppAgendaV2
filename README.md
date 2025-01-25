@@ -2,15 +2,19 @@
 
 
 
+
 ## 📋 Sobre o Projeto  🇧🇷 / About the Project  🇺🇸
 
+🇧🇷
 Este projeto é um sistema de agendamento de consultas desenvolvido em Django, criado através de uma colaboração única entre desenvolvedor humano e Inteligência Artificial (Claude - Anthropic). A proposta foi explorar como a IA pode auxiliar no desenvolvimento de software, desde o planejamento até a implementação.
 
+🇺🇸
 This project is an appointment scheduling system developed in Django, created through a unique collaboration between a human developer and Artificial Intelligence (Claude - Anthropic). The proposal was to explore how AI can assist in software development, from planning to implementation.
 
 
 ## 🤖 Desenvolvimento Assistido por IA  🇧🇷 / AI-Assisted Development  🇺🇸
 
+🇧🇷
 Este projeto foi desenvolvido com a assistência de Claude, uma IA da Anthropic, demonstrando como a colaboração entre humanos e IAs pode resultar em desenvolvimento de software eficiente e bem estruturado. A IA auxiliou em:
 - Estruturação do projeto
 - Decisões de arquitetura
@@ -18,6 +22,7 @@ Este projeto foi desenvolvido com a assistência de Claude, uma IA da Anthropic,
 - Boas práticas de segurança
 - Documentação
 
+🇺🇸
 This project was developed with the assistance of Claude, an AI from Anthropic, demonstrating how collaboration between humans and AIs can result in efficient and well-structured software development. AI assisted in:
 - Project structuring
 - Architectural decisions
@@ -28,12 +33,14 @@ This project was developed with the assistance of Claude, an AI from Anthropic, 
 
 ## 🚀 Funcionalidades  🇧🇷 / Features  🇺🇸
 
+🇧🇷
 - Sistema de login e registro de usuários
 - Agendamento de consultas
 - Dashboard administrativo
 - Visualização de consultas agendadas
 - Gerenciamento de horários disponíveis
 
+🇺🇸
 - User login and registration system
 - Appointment scheduling
 - Administrative dashboard
@@ -96,11 +103,13 @@ python manage.py runserver
 
 ## 🔒 Segurança  🇧🇷 / Security 🇺🇸
 
+🇧🇷
 - Todas as senhas são hasheadas
 - Proteção contra CSRF
 - Variáveis sensíveis em arquivo .env
 - Configurações de segurança do Django ativadas
 
+🇺🇸
 - All passwords are hashed
 - CSRF protection
 - Sensitive variables in .env file
@@ -121,6 +130,7 @@ agenda_web/
 
 ## 🤝 Contribuindo  🇧🇷 / Contributing 🇺🇸
 
+🇧🇷
 Contribuições são sempre bem-vindas! Para contribuir:
 1. Faça um Fork do projeto
 2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
@@ -128,6 +138,7 @@ Contribuições são sempre bem-vindas! Para contribuir:
 4. Faça o Push para a Branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
+🇺🇸
 Contributions are always welcome! To contribute:
 1. Fork the project
 2. Create a Branch for your Feature (`git checkout -b feature/AmazingFeature`)
@@ -138,7 +149,10 @@ Contributions are always welcome! To contribute:
 
 ## 📄 Licença  🇧🇷 / License 🇺🇸
 
+🇧🇷
 Este projeto está sob a licença MIT
+
+🇺🇸
 This project is under the MIT license
 
 
@@ -158,6 +172,8 @@ This project is under the MIT license
 [![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Fernandoanisio1/)
 
 ---
+🇧🇷
 ⭐️ Desenvolvido com assistência de Claude (Anthropic) - Demonstrando o poder da colaboração entre humano e IA no desenvolvimento de software.
 
+🇺🇸
 ⭐️ Developed with assistance from Claude (Anthropic) - Demonstrating the power of human-AI collaboration in software development.
