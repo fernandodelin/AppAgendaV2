@@ -1,9 +1,9 @@
-# 🗓️ Sistema de Agendamento de Consultas 🇧🇷 / Appointment Scheduling System 🇺🇸
+# 🗓️ Sistema de Agendamento de Consultas  🇧🇷 / Appointment Scheduling System  🇺🇸
 
 
 
 
-## 📋 Sobre o Projeto  🇧🇷 / About the Project  🇺🇸
+## 📋 Sobre o Projeto  🇧🇷  /  About the Project  🇺🇸
 
 🇧🇷
 Este projeto é um sistema de agendamento de consultas desenvolvido em Django, criado através de uma colaboração única entre desenvolvedor humano e Inteligência Artificial (Claude - Anthropic). A proposta foi explorar como a IA pode auxiliar no desenvolvimento de software, desde o planejamento até a implementação.
@@ -12,7 +12,7 @@ Este projeto é um sistema de agendamento de consultas desenvolvido em Django, c
 This project is an appointment scheduling system developed in Django, created through a unique collaboration between a human developer and Artificial Intelligence (Claude - Anthropic). The proposal was to explore how AI can assist in software development, from planning to implementation.
 
 
-## 🤖 Desenvolvimento Assistido por IA  🇧🇷 / AI-Assisted Development  🇺🇸
+## 🤖 Desenvolvimento Assistido por IA  🇧🇷  /  AI-Assisted Development  🇺🇸
 
 🇧🇷
 Este projeto foi desenvolvido com a assistência de Claude, uma IA da Anthropic, demonstrando como a colaboração entre humanos e IAs pode resultar em desenvolvimento de software eficiente e bem estruturado. A IA auxiliou em:
@@ -31,7 +31,7 @@ This project was developed with the assistance of Claude, an AI from Anthropic, 
 - Documentation
 
 
-## 🚀 Funcionalidades  🇧🇷 / Features  🇺🇸
+## 🚀 Funcionalidades  🇧🇷  /  Features  🇺🇸
 
 🇧🇷
 - Sistema de login e registro de usuários
@@ -48,7 +48,7 @@ This project was developed with the assistance of Claude, an AI from Anthropic, 
 - Management of available times
 
 
-## 🛠️ Tecnologias Utilizadas  🇧🇷 / Technologies Used  🇺🇸
+## 🛠️ Tecnologias Utilizadas  🇧🇷  /  Technologies Used  🇺🇸
 
 - Python 3.13
 - Django (Framework Web)
@@ -57,14 +57,14 @@ This project was developed with the assistance of Claude, an AI from Anthropic, 
 - Bootstrap (Framework CSS)
 
 
-## 📋 Pré-requisitos  🇧🇷 / Prerequisites 🇺🇸
+## 📋 Pré-requisitos  🇧🇷  /  Prerequisites  🇺🇸
 
 - Python 3.13+
 - pip (gerenciador de pacotes Python)
 - Virtual Environment
 
 
-## ⚙️ Configuração e Instalação  🇧🇷 / Configuration and Installation 🇺🇸
+## ⚙️ Configuração e Instalação  🇧🇷  /  Configuration and Installation  🇺🇸
  
 1. Clone o repositório / Clone repo
 ```bash
@@ -101,7 +101,7 @@ python manage.py runserver
 ```
 
 
-## 🔒 Segurança  🇧🇷 / Security 🇺🇸
+## 🔒 Segurança  🇧🇷  /  Security  🇺🇸
 
 🇧🇷
 - Todas as senhas são hasheadas
@@ -116,7 +116,7 @@ python manage.py runserver
 - Django security settings enabled
 
 
-## 📝 Estrutura do Projeto  🇧🇷 / Project Structure 🇺🇸
+## 📝 Estrutura do Projeto  🇧🇷  /  Project Structure  🇺🇸
 
 ```
 agenda_web/
@@ -128,7 +128,7 @@ agenda_web/
 ```
 
 
-## 🤝 Contribuindo  🇧🇷 / Contributing 🇺🇸
+## 🤝 Contribuindo  🇧🇷  /  Contributing  🇺🇸
 
 🇧🇷
 Contribuições são sempre bem-vindas! Para contribuir:
@@ -147,7 +147,7 @@ Contributions are always welcome! To contribute:
 5. Open a Pull RequestContributing
 
 
-## 📄 Licença  🇧🇷 / License 🇺🇸
+## 📄 Licença  🇧🇷  /  License  🇺🇸
 
 🇧🇷
 Este projeto está sob a licença MIT
@@ -156,13 +156,13 @@ Este projeto está sob a licença MIT
 This project is under the MIT license
 
 
-## 👥 Autores  🇧🇷 / Authors 🇺🇸
+## 👥 Autores  🇧🇷  /  Authors  🇺🇸
 
 - Fernando Anisio Goulart - Desenvolvedor Principal / Lead Developer
 - Claude (Anthropic) - Assistente de IA / AI Assistant
 
 
-## 📞 Conecte-se comigo  🇧🇷 / Connect with me 🇺🇸
+## 📞 Conecte-se comigo  🇧🇷  /  Connect with me  🇺🇸
 
 [![Perfil DIO](https://img.shields.io/badge/-Meu%20Perfil%20na%20DIO-30A3DC?style=for-the-badge)](https://web.dio.me/users/viapythoncolab/)
 [![E-mail](https://img.shields.io/badge/-Email-000?style=for-the-badge&logo=microsoft-outlook&logoColor=E94D5F)](mailto:fernandoanisiomail@gmail.com)
